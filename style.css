@@ -16,13 +16,122 @@
 }
 
 body {
-  font-family: "League Spartan";
-  font-size: 0.9375rem;
-  display: flex;
-  flex-direction: column;
+  background-image: url(./images/bg-pattern-top-mobile.svg),
+    url(./images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center, bottom center;
+  background-size: contain contain;
+  font-family: "League Spartan", sans-serif;
   position: relative;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  line-height: 1.2;
 }
 
-picture img {
+.top-background img {
   position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.bottom-background img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+main {
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+header h1 {
+  margin: 0 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Magenta);
+  margin-bottom: 1.5rem;
+  line-height: normal;
+}
+
+header p {
+  color: var(--Dark-Grayish-Magenta);
+  margin-bottom: 0.8rem;
+}
+
+.ratings section {
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Magenta);
+}
+
+.ratings section:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.persons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.persons .card {
+  background-color: var(--Very-Dark-Magenta);
+  padding: 2rem;
+  color: var(--Light-Grayish-Magenta);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 1.5rem;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.details img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.5rem;
+}
+
+.details p:first-child {
+  font-weight: 700;
+}
+
+.details p:last-child {
+  color: var(--Dark-Grayish-Magenta);
+}
+
+@media (min-width: 800px) {
+  body {
+    background-image: url(./images/bg-pattern-top-desktop.svg),
+      url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-size: 400px, 800px;
+  }
+
+  main {
+    padding: 4rem 6rem;
+  }
 }
