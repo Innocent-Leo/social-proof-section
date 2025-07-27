@@ -20,7 +20,6 @@ body {
     url(./images/bg-pattern-bottom-mobile.svg);
   background-repeat: no-repeat;
   background-position: top center, bottom center;
-  background-size: contain contain;
   font-family: "League Spartan", sans-serif;
   position: relative;
   min-height: 100vh;
